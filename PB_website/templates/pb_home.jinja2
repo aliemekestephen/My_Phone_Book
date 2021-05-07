@@ -1,0 +1,37 @@
+{% extends 'base.jinja2' %}
+{% block title %}Home{% endblock %}
+
+    {% block content %}
+        <br/>
+
+    <div class="pb_center">
+        <br/>
+        <h1 class="c"><i class="fas fa-address-book"></i> Contacts</h1>
+        <table class="table auto-index">
+            <tr class="head1">
+                {% for header in headings %}
+                    <th class="t_cell">{{ header }}</th>
+                {% endfor %}
+            </tr>
+
+            {% for con in cons %}
+                <tr class="head2">
+                    <td class="t_cell"></td>
+                    <td class="t_cell">{{ con['first_name'] }} {{ con['last_name'] }}</td>
+                    <td class="t_cell">{{ con['mobile_no'] }}</td>
+                    <td class="t_cell">{{ con['phone_no'] }}</td>
+                    <td class="t_cell">{{ con['birth_date'] }}</td>
+                    <td class="t_cell">{{ con['email'] }}
+                    <td class="t_cell">
+                        <i class="far fa-envelope option">  &nbsp;&nbsp;</i><i class="far fa-trash-alt option" onclick="deleteContact({{ con.id }})"></i>
+                    </td>
+
+                </tr>
+            {% endfor %}
+
+        </table>
+        <br/><br/>
+    </div>
+
+    {% endblock %}
+

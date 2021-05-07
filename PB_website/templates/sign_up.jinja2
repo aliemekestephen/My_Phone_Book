@@ -1,0 +1,53 @@
+{% extends 'base.jinja2' %}
+{% block title %}Sign Up{% endblock %}
+
+{% block content %}
+    <div class="s_center">
+        <form class="s_form" method="post">
+            <br/>
+            <h1 class="h1_l"><i class="fas fa-user-plus"></i> User Sign Up</h1>
+
+            <div class="member">
+                Already have an account? <a href="{{ url_for('auth.login') }}">Login</a>
+            </div>
+            <br />
+
+            <div class="s_field">
+                <label for="email">Email Address</label>
+                <input type="email" class="s_field" id="email" name="email">
+            </div>
+
+            <div class="s_field">
+                <label for="name">Name</label>
+                <input type="text" class="s_field" id="name" name="name">
+            </div>
+
+            <div class="s_field set">
+                <label for="password1">Password</label>
+                <input type="password" class="s_field" id="password1" name="password1">
+                <span class="eye" onclick="toggle1()">
+                    <i id="hide1" class=" far fa-eye"></i>
+                    <i id="hide2" class=" far fa-eye-slash"></i>
+                </span>
+            </div>
+
+            <div class="s_field set">
+                <label for="password2">Confirm Password</label>
+                <input type="password" class="s_field" id="password2" name="password2">
+                <span class="eye"  onclick="toggle2()">
+                    <i id="hide11" class=" far fa-eye"></i>
+                    <i id="hide22" class=" far fa-eye-slash"></i>
+                </span>
+            </div>
+
+            <section class="member">
+                <p><span class="small">By continuing, you agree to accept our <br /> <a href="#">Privacy Policy</a> & <a href="#">Terms of Service</a></span> </p>
+            </section>
+            <br />
+            <button type="submit" class="s_submit">Submit</button>
+
+
+        </form>
+    </div>
+
+{% endblock %}

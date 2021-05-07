@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+.pb_center {
+    font-family: "Montserrat","sans-serif";
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    width: 1100px;
+    background: rgba(242, 244, 246, 0.71);
+    box-shadow: 0px 3px 10px grey;
+}
+
+.log li {
+    list-style: none;
+    padding-right: 10px;
+}
+
+.u_name {
+    font-size: 12px;
+    color: #a80101;
+}
+
+.logout{
+    text-decoration: none;
+}
+
+.logout a{
+    font-size: 12px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+.logout a:hover{
+    text-decoration: underline;
+}
+
+.c {
+    text-align: center;
+    font-size: 30px;
+    padding: 0 0 20px 0;
+}
+
+tr:nth-child(even){
+    background-color: #e5e5e5;
+}
+
+.head1{
+    font-size: 18px;
+    text-align: left;
+}
+
+.head2{
+    font-size: 14px;
+}
+
+.head2:hover{
+    background: #c9bdbd;
+}
+
+table{
+    border-spacing: 0;
+    align-items: center;
+    width: 100%;
+}
+
+.auto-index td:first-child:before
+{
+  counter-increment: Serial;      /* Increment the Serial counter */
+  content: counter(Serial); /* Display the counter */
+}
+
+.t_cell{
+    padding: 8px;
+}
+
+.option{
+    cursor: pointer;
+}
+
+.option:hover{
+    font-size: 18px;
+}

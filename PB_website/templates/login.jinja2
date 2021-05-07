@@ -1,0 +1,35 @@
+{% extends 'base.jinja2' %}
+{% block title %}Login{% endblock %}
+
+{% block content %}
+
+<div class="center">
+        <br/>
+        <h1 class="h1_l"><i class="fas fa-sign-in-alt"></i> User Login</h1>
+        <h5><span class="report">{{ report }}</span></h5>
+        <form method="post">
+            <div class="txt_field">
+                <input type="text" name="email" required>
+                <span></span>
+                <label for="email">Email</label>
+            </div>
+
+            <div class="txt_field">
+                <input type="password" name="password" required>
+                <span></span>
+                <label for="password">Password</label>
+            </div>
+
+            <div class="pass">Forgot Password?</div>
+
+            <input type="submit" value="Login">
+
+            <div class="signup_link">
+                Not a member? <a href="{{ url_for('auth.register') }}">Signup</a>
+            </div>
+        </form>
+
+</div>
+
+
+{% endblock %}
